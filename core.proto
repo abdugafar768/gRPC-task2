@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service TestService {
+    rpc ServiceOneMethod (stream LetterRequest) returns (stream LetterResponse);
+}
+
+message LetterResponse {
+    string a = 1;
+}
+
+message LetterRequest {
+    string b = 1;
+}
